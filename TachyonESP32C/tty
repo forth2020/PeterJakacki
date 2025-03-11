@@ -1,0 +1,1 @@
+minicom --color=on -w -b 921600 -D /dev/tty$1

@@ -1,0 +1,1198 @@
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:155: warning: "UEFORTH_PLATFORM_IS_ESP32C3" redefined
+  155 | # define UEFORTH_PLATFORM_IS_ESP32C3 -1
+      | 
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:77: note: this is the location of the previous definition
+   77 | # define UEFORTH_PLATFORM_IS_ESP32C3 (-1)
+      | 
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino: In function 'cell_t* forth_run(cell_t*)':
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:20: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                    ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:25: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                         ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:30: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                              ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:34: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                  ^~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:39: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                       ^
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:42: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                          ^~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:49: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                                 ^~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:56: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                                        ^~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:19: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1416 |   register float *fp, ft;
+      |                   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:23: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1416 |   register float *fp, ft;
+      |                       ^~
+In function 'void forth_faults_setup()',
+    inlined from 'cell_t* forth_run(cell_t*)' at /home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1412:23:
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1288:29: warning: 'void* __builtin_memcpy(void*, const void*, unsigned int)' reading 128 bytes from a region of size 4 [-Wstringop-overread]
+ 1288 |     g_forth_vector_table[i] = vector_table[i];
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino: In function 'cell_t* forth_run(cell_t*)':
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1277:14: note: source object '_vector_table' of size 4
+ 1277 | extern void *_vector_table;
+      |              ^~~~~~~~~~~~~
+Sketch uses 1162832 bytes (88%) of program storage space. Maximum is 1310720 bytes.
+Global variables use 41460 bytes (12%) of dynamic memory, leaving 286220 bytes for local variables. Maximum is 327680 bytes.
+esptool.py v4.6
+Serial port /dev/ttyACM0
+Connecting....
+Chip is ESP32-C3 (revision v0.4)
+Features: WiFi, BLE
+Crystal is 40MHz
+MAC: ec:da:3b:be:a2:fc
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 921600
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00004fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x00132fff...
+Compressed 19024 bytes to 12296...
+Writing at 0x00000000... (100 %)
+Wrote 19024 bytes (12296 compressed) at 0x00000000 in 0.3 seconds (effective 553.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.1 seconds (effective 472.3 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.1 seconds (effective 765.8 kbit/s)...
+Hash of data verified.
+Compressed 1189312 bytes to 717094...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001c134... (4 %)
+Writing at 0x00028447... (6 %)
+Writing at 0x00033e68... (9 %)
+Writing at 0x0003acb9... (11 %)
+Writing at 0x0003fc08... (13 %)
+Writing at 0x00048293... (15 %)
+Writing at 0x0005125e... (18 %)
+Writing at 0x0005859d... (20 %)
+Writing at 0x0005ec71... (22 %)
+Writing at 0x000658db... (25 %)
+Writing at 0x0006bead... (27 %)
+Writing at 0x0007229a... (29 %)
+Writing at 0x0007822a... (31 %)
+Writing at 0x0007e175... (34 %)
+Writing at 0x00084525... (36 %)
+Writing at 0x0008a1ae... (38 %)
+Writing at 0x000902a7... (40 %)
+Writing at 0x00096022... (43 %)
+Writing at 0x0009b9c7... (45 %)
+Writing at 0x000a1240... (47 %)
+Writing at 0x000a6d12... (50 %)
+Writing at 0x000acde7... (52 %)
+Writing at 0x000b2d13... (54 %)
+Writing at 0x000b8b50... (56 %)
+Writing at 0x000beaef... (59 %)
+Writing at 0x000c46be... (61 %)
+Writing at 0x000ca80e... (63 %)
+Writing at 0x000d01a6... (65 %)
+Writing at 0x000d62a7... (68 %)
+Writing at 0x000dc1a2... (70 %)
+Writing at 0x000e1f5b... (72 %)
+Writing at 0x000e80e4... (75 %)
+Writing at 0x000ee0d2... (77 %)
+Writing at 0x000f465c... (79 %)
+Writing at 0x000fa6de... (81 %)
+Writing at 0x00101074... (84 %)
+Writing at 0x001072c9... (86 %)
+Writing at 0x0010d1cd... (88 %)
+Writing at 0x00113638... (90 %)
+Writing at 0x0011b58c... (93 %)
+Writing at 0x00120e8d... (95 %)
+Writing at 0x00126fa7... (97 %)
+Writing at 0x0012d3c6... (100 %)
+Wrote 1189312 bytes (717094 compressed) at 0x00010000 in 8.9 seconds (effective 1067.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+
+ELF file SHA256: 5de973852
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403818a4
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x10ac
+load:0x403cc710,len:0xad4
+load:0x403ce710,len:0x2e78
+entry 0x403cc710
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x42003682  RA      : 0x42000aee  SP      : 0x3fca0240  GP      : 0x3fc90000  
+TP      : 0x3fca0670  T0      : 0x1900006f  T1      : 0x00000019  T2      : 0x1940006f  
+S0/FP   : 0x3fca0918  S1      : 0x3fca19a4  A0      : 0x00000000  A1      : 0x3fca3c20  
+A2      : 0x0000000c  A3      : 0x3fca2ec4  A4      : 0xffffffff Guru Meditation Error: Core  0 panic'ed (Load access fault). 
+Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x42003682  RA      : 0x42000aee  SP      : 0x3fca0240  GP      : 0x3fc90000  
+TP      : 0x3fca0670  T0      : 0x1900006f  T1      : 0x00000019  T2      : 0x1940006f  
+S0/FP   : 0x3fca0918  S1      : 0x3fca19a4  A0      : 0x00000000  A1      : 0x3fca3c20  
+A2      : 0x0000000c  A3      : 0x3fca2ec4  A4      : 0xffffffff  A5      : 0x00000000  
+A6      : 0x00000000  A7      : 0x00000009  S2      : 0x3fca1198  S3      : 0x00000009  
+S4      : 0xffffffff  S5      : 0x3fca0994  S6      : 0x3c0fd196  S7      : 0x3fca2358  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x0000c9fd  T4      : 0x00000020  T5      : 0x00000001  T6      : 0x18c0006f  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000005  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+Stack memory:
+3fca0240: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca0260: 0xa5a5a5a5 0xa5a5a5a5 0x3fca2ec0 0x3fca1998 0xffffffff 0x3fca0994 0x00000000 0xa5a5a5a5
+3fca0280: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0x3c0fd196 0x00000000 0x00000000
+3fca02a0: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca02c0: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca02e0: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca0300: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca0320: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca0340: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca0360: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca0380: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca03a0: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca03c0: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca03e0: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca0400: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca0420: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca0440: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca0460: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca0480: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca04a0: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca04c0: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca04e0: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca0500: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca0520: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca0540: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fca0560: 0x42000362 0x42000378 0x3fca05e0 0x3fc90000 0x3fca0670 0x1900006f 0x0a20006f 0x1940006f
+3fca0580: 0x3fca2290 0x00000006 0x00000000 0x3c0e0d18 0x00000006 0x00000042 0x00000053 0x00000000
+3fca05a0: 0x00000001 0x00000019 0x3c100bb4 0x00000004 0x3c0e0214 0x3fca2194 0x00000008 0x3fca0918
+3fca05c0: 0x00000005 0x00000000 0x00000000 0x00000000 0x1800006f 0x1840006f 0x1880006f 0x18c0006f
+3fca05e0: 0x00000000 0x00000000 0x00000000 0xcb6cb2b8 0x0000000a 0x3fca2354 0x3c0f344c 0x00000000
+3fca0600: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x3fc99000 0x3fca0918 0x42003e38
+3fca0620: 0x00000000 0x00000000 0x4200fd9c 0x4200fa5c 0x00000000 0x00000000 0x00000000 0x40388d8c
+
+
+
+
+
+
+
+
+
+
+
+
+
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:155: warning: "UEFORTH_PLATFORM_IS_ESP32C3" redefined
+  155 | # define UEFORTH_PLATFORM_IS_ESP32C3 -1
+      | 
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:77: note: this is the location of the previous definition
+   77 | # define UEFORTH_PLATFORM_IS_ESP32C3 (-1)
+      | 
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino: In function 'cell_t* forth_run(cell_t*)':
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:20: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                    ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:25: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                         ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:30: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                              ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:34: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                  ^~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:39: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                       ^
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:42: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                          ^~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:49: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                                 ^~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:56: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                                        ^~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:19: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1416 |   register float *fp, ft;
+      |                   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:23: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1416 |   register float *fp, ft;
+      |                       ^~
+In function 'void forth_faults_setup()',
+    inlined from 'cell_t* forth_run(cell_t*)' at /home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1412:23:
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1288:29: warning: 'void* __builtin_memcpy(void*, const void*, unsigned int)' reading 128 bytes from a region of size 4 [-Wstringop-overread]
+ 1288 |     g_forth_vector_table[i] = vector_table[i];
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino: In function 'cell_t* forth_run(cell_t*)':
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1277:14: note: source object '_vector_table' of size 4
+ 1277 | extern void *_vector_table;
+      |              ^~~~~~~~~~~~~
+Sketch uses 1162832 bytes (88%) of program storage space. Maximum is 1310720 bytes.
+Global variables use 41460 bytes (12%) of dynamic memory, leaving 286220 bytes for local variables. Maximum is 327680 bytes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:51: warning: "CONFIG_IDF_TARGET_ESP32C3" redefined
+   51 | #define CONFIG_IDF_TARGET_ESP32C3 (-1)
+      | 
+In file included from /home/peter/.arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-466a392a/esp32c3/include/newlib/platform_include/sys/lock.h:9,
+                 from /home/peter/.arduino15/packages/esp32/tools/esp-rv32/2405/riscv32-esp-elf/include/sys/reent.h:34,
+                 from /home/peter/.arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-466a392a/esp32c3/include/newlib/platform_include/sys/reent.h:22,
+                 from /home/peter/.arduino15/packages/esp32/tools/esp-rv32/2405/riscv32-esp-elf/include/stdio.h:60,
+                 from /home/peter/.arduino15/packages/esp32/hardware/esp32/3.1.0-RC1/cores/esp32/Arduino.h:27,
+                 from /home/peter/.var/app/cc.arduino.IDE2/cache/arduino/sketches/177E34B5FDC6D29B6BFB14EF7E91EF6A/sketch/ESP32forth-Tachyon.ino.cpp:1:
+/home/peter/.arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-466a392a/esp32c3/qio_qspi/include/sdkconfig.h:288: note: this is the location of the previous definition
+  288 | #define CONFIG_IDF_TARGET_ESP32C3 1
+      | 
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:155: warning: "UEFORTH_PLATFORM_IS_ESP32C3" redefined
+  155 | # define UEFORTH_PLATFORM_IS_ESP32C3 -1
+      | 
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:77: note: this is the location of the previous definition
+   77 | # define UEFORTH_PLATFORM_IS_ESP32C3 (-1)
+      | 
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino: In function 'cell_t* forth_run(cell_t*)':
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:20: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                    ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:25: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                         ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:30: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                              ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:34: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                  ^~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:39: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                       ^
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:42: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                          ^~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:49: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                                 ^~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:56: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                                        ^~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:19: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1416 |   register float *fp, ft;
+      |                   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:23: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1416 |   register float *fp, ft;
+      |                       ^~
+In function 'void forth_faults_setup()',
+    inlined from 'cell_t* forth_run(cell_t*)' at /home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1412:23:
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1288:29: warning: 'void* __builtin_memcpy(void*, const void*, unsigned int)' reading 128 bytes from a region of size 4 [-Wstringop-overread]
+ 1288 |     g_forth_vector_table[i] = vector_table[i];
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino: In function 'cell_t* forth_run(cell_t*)':
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1277:14: note: source object '_vector_table' of size 4
+ 1277 | extern void *_vector_table;
+      |              ^~~~~~~~~~~~~
+Sketch uses 1162832 bytes (88%) of program storage space. Maximum is 1310720 bytes.
+Global variables use 41460 bytes (12%) of dynamic memory, leaving 286220 bytes for local variables. Maximum is 327680 bytes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:51: warning: "CONFIG_IDF_TARGET_ESP32C3" redefined
+   51 | #define CONFIG_IDF_TARGET_ESP32C3 (-1)
+      | 
+In file included from /home/peter/.arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-466a392a/esp32c3/include/newlib/platform_include/sys/lock.h:9,
+                 from /home/peter/.arduino15/packages/esp32/tools/esp-rv32/2405/riscv32-esp-elf/include/sys/reent.h:34,
+                 from /home/peter/.arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-466a392a/esp32c3/include/newlib/platform_include/sys/reent.h:22,
+                 from /home/peter/.arduino15/packages/esp32/tools/esp-rv32/2405/riscv32-esp-elf/include/stdio.h:60,
+                 from /home/peter/.arduino15/packages/esp32/hardware/esp32/3.1.0-RC1/cores/esp32/Arduino.h:27,
+                 from /home/peter/.var/app/cc.arduino.IDE2/cache/arduino/sketches/177E34B5FDC6D29B6BFB14EF7E91EF6A/sketch/ESP32forth-Tachyon.ino.cpp:1:
+/home/peter/.arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-466a392a/esp32c3/qio_qspi/include/sdkconfig.h:288: note: this is the location of the previous definition
+  288 | #define CONFIG_IDF_TARGET_ESP32C3 1
+      | 
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:155: warning: "UEFORTH_PLATFORM_IS_ESP32C3" redefined
+  155 | # define UEFORTH_PLATFORM_IS_ESP32C3 -1
+      | 
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:77: note: this is the location of the previous definition
+   77 | # define UEFORTH_PLATFORM_IS_ESP32C3 (-1)
+      | 
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino: In function 'cell_t* forth_run(cell_t*)':
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:20: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                    ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:25: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                         ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:30: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                              ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:34: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                  ^~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:39: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                       ^
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:42: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                          ^~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:49: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                                 ^~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:56: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                                        ^~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:19: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1416 |   register float *fp, ft;
+      |                   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:23: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1416 |   register float *fp, ft;
+      |                       ^~
+In function 'void forth_faults_setup()',
+    inlined from 'cell_t* forth_run(cell_t*)' at /home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1412:23:
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1288:29: warning: 'void* __builtin_memcpy(void*, const void*, unsigned int)' reading 128 bytes from a region of size 4 [-Wstringop-overread]
+ 1288 |     g_forth_vector_table[i] = vector_table[i];
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino: In function 'cell_t* forth_run(cell_t*)':
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1277:14: note: source object '_vector_table' of size 4
+ 1277 | extern void *_vector_table;
+      |              ^~~~~~~~~~~~~
+Sketch uses 1162832 bytes (88%) of program storage space. Maximum is 1310720 bytes.
+Global variables use 41460 bytes (12%) of dynamic memory, leaving 286220 bytes for local variables. Maximum is 327680 bytes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:51: warning: "CONFIG_IDF_TARGET_ESP32C3" redefined
+   51 | #define CONFIG_IDF_TARGET_ESP32C3 (-1)
+      | 
+In file included from /home/peter/.arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-466a392a/esp32c3/include/newlib/platform_include/sys/lock.h:9,
+                 from /home/peter/.arduino15/packages/esp32/tools/esp-rv32/2405/riscv32-esp-elf/include/sys/reent.h:34,
+                 from /home/peter/.arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-466a392a/esp32c3/include/newlib/platform_include/sys/reent.h:22,
+                 from /home/peter/.arduino15/packages/esp32/tools/esp-rv32/2405/riscv32-esp-elf/include/stdio.h:60,
+                 from /home/peter/.arduino15/packages/esp32/hardware/esp32/3.1.0-RC1/cores/esp32/Arduino.h:27,
+                 from /home/peter/.var/app/cc.arduino.IDE2/cache/arduino/sketches/177E34B5FDC6D29B6BFB14EF7E91EF6A/sketch/ESP32forth-Tachyon.ino.cpp:1:
+/home/peter/.arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-466a392a/esp32c3/qio_qspi/include/sdkconfig.h:288: note: this is the location of the previous definition
+  288 | #define CONFIG_IDF_TARGET_ESP32C3 1
+      | 
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:155: warning: "UEFORTH_PLATFORM_IS_ESP32C3" redefined
+  155 | # define UEFORTH_PLATFORM_IS_ESP32C3 -1
+      | 
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:77: note: this is the location of the previous definition
+   77 | # define UEFORTH_PLATFORM_IS_ESP32C3 (-1)
+      | 
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino: In function 'cell_t* forth_run(cell_t*)':
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:20: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                    ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:25: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                         ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:30: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                              ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:34: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                  ^~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:39: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                       ^
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:42: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                          ^~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:49: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                                 ^~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:56: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                                        ^~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:19: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1416 |   register float *fp, ft;
+      |                   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:23: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1416 |   register float *fp, ft;
+      |                       ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:788:32: error: 'ledcSetup' was not declared in this scope
+  788 |       n0 = (cell_t) (1000000 * ledcSetup(n2, n1 / 1000.0, n0)); NIPn(2)) \
+      |                                ^~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1418:47: note: in definition of macro 'Z'
+ 1418 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:787:3: note: in expansion of macro 'YV'
+  787 |   YV(ledc, ledcSetup, \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:647:3: note: in expansion of macro 'OPTIONAL_LEDC_SUPPORT'
+  647 |   OPTIONAL_LEDC_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1419:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1419 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:789:27: error: 'ledcAttachPin' was not declared in this scope; did you mean 'ledcAttach'?
+  789 |   YV(ledc, ledcAttachPin, ledcAttachPin(n1, n0); DROPn(2)) \
+      |                           ^~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1418:47: note: in definition of macro 'Z'
+ 1418 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:789:3: note: in expansion of macro 'YV'
+  789 |   YV(ledc, ledcAttachPin, ledcAttachPin(n1, n0); DROPn(2)) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:647:3: note: in expansion of macro 'OPTIONAL_LEDC_SUPPORT'
+  647 |   OPTIONAL_LEDC_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1419:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1419 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:790:27: error: 'ledcDetachPin' was not declared in this scope; did you mean 'ledcDetach'?
+  790 |   YV(ledc, ledcDetachPin, ledcDetachPin(n0); DROP) \
+      |                           ^~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1418:47: note: in definition of macro 'Z'
+ 1418 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:790:3: note: in expansion of macro 'YV'
+  790 |   YV(ledc, ledcDetachPin, ledcDetachPin(n0); DROP) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:647:3: note: in expansion of macro 'OPTIONAL_LEDC_SUPPORT'
+  647 |   OPTIONAL_LEDC_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1419:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1419 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+Multiple libraries were found for "WiFi.h"
+  Used: /home/peter/.arduino15/packages/esp32/hardware/esp32/3.1.0-RC1/libraries/WiFi
+  Not used: /home/peter/Arduino/libraries/WiFiEspAT
+exit status 1
+
+Compilation error: 'ledcSetup' was not declared in this scope
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:51: warning: "CONFIG_IDF_TARGET_ESP32C3" redefined
+   51 | #define CONFIG_IDF_TARGET_ESP32C3 (-1)
+      | 
+In file included from /home/peter/.arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-466a392a/esp32c3/include/newlib/platform_include/sys/lock.h:9,
+                 from /home/peter/.arduino15/packages/esp32/tools/esp-rv32/2405/riscv32-esp-elf/include/sys/reent.h:34,
+                 from /home/peter/.arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-466a392a/esp32c3/include/newlib/platform_include/sys/reent.h:22,
+                 from /home/peter/.arduino15/packages/esp32/tools/esp-rv32/2405/riscv32-esp-elf/include/stdio.h:60,
+                 from /home/peter/.arduino15/packages/esp32/hardware/esp32/3.1.0-RC1/cores/esp32/Arduino.h:27,
+                 from /home/peter/.var/app/cc.arduino.IDE2/cache/arduino/sketches/177E34B5FDC6D29B6BFB14EF7E91EF6A/sketch/ESP32forth-Tachyon.ino.cpp:1:
+/home/peter/.arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-466a392a/esp32c3/qio_qspi/include/sdkconfig.h:288: note: this is the location of the previous definition
+  288 | #define CONFIG_IDF_TARGET_ESP32C3 1
+      | 
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:155: warning: "UEFORTH_PLATFORM_IS_ESP32C3" redefined
+  155 | # define UEFORTH_PLATFORM_IS_ESP32C3 -1
+      | 
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:77: note: this is the location of the previous definition
+   77 | # define UEFORTH_PLATFORM_IS_ESP32C3 (-1)
+      | 
+In file included from /home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:20,
+                 from /home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:626:
+/home/peter/.arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-466a392a/esp32c3/include/spi_flash/include/esp_spi_flash.h:6:2: warning: #warning esp_spi_flash.h is deprecated, please use spi_flash_mmap.h instead [-Wcpp]
+    6 | #warning esp_spi_flash.h is deprecated, please use spi_flash_mmap.h instead
+      |  ^~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino: In function 'cell_t* forth_run(cell_t*)':
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:20: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                    ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:25: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                         ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:30: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                              ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:34: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                  ^~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:39: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                       ^
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:42: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                          ^~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:49: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                                 ^~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:56: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1415 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                                        ^~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:19: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1416 |   register float *fp, ft;
+      |                   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:23: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1416 |   register float *fp, ft;
+      |                       ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:27:33: error: 'spi_flash_init' was not declared in this scope; did you mean 'spi_flash_mmap'?
+   27 |   YV(spi_flash, spi_flash_init, spi_flash_init()) \
+      |                                 ^~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1418:47: note: in definition of macro 'Z'
+ 1418 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:27:3: note: in expansion of macro 'YV'
+   27 |   YV(spi_flash, spi_flash_init, spi_flash_init()) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:667:3: note: in expansion of macro 'OPTIONAL_SPI_FLASH_SUPPORT'
+  667 |   OPTIONAL_SPI_FLASH_SUPPORT
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:638:3: note: in expansion of macro 'EXTERNAL_OPTIONAL_MODULE_SUPPORT'
+  638 |   EXTERNAL_OPTIONAL_MODULE_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1419:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1419 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:28:47: error: 'spi_flash_get_chip_size' was not declared in this scope
+   28 |   YV(spi_flash, spi_flash_get_chip_size, PUSH spi_flash_get_chip_size()) \
+      |                                               ^~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1418:47: note: in definition of macro 'Z'
+ 1418 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:28:3: note: in expansion of macro 'YV'
+   28 |   YV(spi_flash, spi_flash_get_chip_size, PUSH spi_flash_get_chip_size()) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:667:3: note: in expansion of macro 'OPTIONAL_SPI_FLASH_SUPPORT'
+  667 |   OPTIONAL_SPI_FLASH_SUPPORT
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:638:3: note: in expansion of macro 'EXTERNAL_OPTIONAL_MODULE_SUPPORT'
+  638 |   EXTERNAL_OPTIONAL_MODULE_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1419:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1419 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:29:46: error: 'spi_flash_erase_sector' was not declared in this scope
+   29 |   YV(spi_flash, spi_flash_erase_sector, n0 = spi_flash_erase_sector(n0)) \
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1418:47: note: in definition of macro 'Z'
+ 1418 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:29:3: note: in expansion of macro 'YV'
+   29 |   YV(spi_flash, spi_flash_erase_sector, n0 = spi_flash_erase_sector(n0)) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:667:3: note: in expansion of macro 'OPTIONAL_SPI_FLASH_SUPPORT'
+  667 |   OPTIONAL_SPI_FLASH_SUPPORT
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:638:3: note: in expansion of macro 'EXTERNAL_OPTIONAL_MODULE_SUPPORT'
+  638 |   EXTERNAL_OPTIONAL_MODULE_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1419:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1419 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:30:45: error: 'spi_flash_erase_range' was not declared in this scope; did you mean 'spi_flash_mmap_pages'?
+   30 |   YV(spi_flash, spi_flash_erase_range, n0 = spi_flash_erase_range(n1, n0); DROP) \
+      |                                             ^~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1418:47: note: in definition of macro 'Z'
+ 1418 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:30:3: note: in expansion of macro 'YV'
+   30 |   YV(spi_flash, spi_flash_erase_range, n0 = spi_flash_erase_range(n1, n0); DROP) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:667:3: note: in expansion of macro 'OPTIONAL_SPI_FLASH_SUPPORT'
+  667 |   OPTIONAL_SPI_FLASH_SUPPORT
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:638:3: note: in expansion of macro 'EXTERNAL_OPTIONAL_MODULE_SUPPORT'
+  638 |   EXTERNAL_OPTIONAL_MODULE_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1419:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1419 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:31:39: error: 'spi_flash_write' was not declared in this scope; did you mean 'spi_flash_source'?
+   31 |   YV(spi_flash, spi_flash_write, n0 = spi_flash_write(n2, a1, n0); NIPn(2)) \
+      |                                       ^~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1418:47: note: in definition of macro 'Z'
+ 1418 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:31:3: note: in expansion of macro 'YV'
+   31 |   YV(spi_flash, spi_flash_write, n0 = spi_flash_write(n2, a1, n0); NIPn(2)) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:667:3: note: in expansion of macro 'OPTIONAL_SPI_FLASH_SUPPORT'
+  667 |   OPTIONAL_SPI_FLASH_SUPPORT
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:638:3: note: in expansion of macro 'EXTERNAL_OPTIONAL_MODULE_SUPPORT'
+  638 |   EXTERNAL_OPTIONAL_MODULE_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1419:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1419 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:32:49: error: 'spi_flash_write_encrypted' was not declared in this scope
+   32 |   YV(spi_flash, spi_flash_write_encrypted, n0 = spi_flash_write_encrypted(n2, a1, n0); NIPn(2)) \
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1418:47: note: in definition of macro 'Z'
+ 1418 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:32:3: note: in expansion of macro 'YV'
+   32 |   YV(spi_flash, spi_flash_write_encrypted, n0 = spi_flash_write_encrypted(n2, a1, n0); NIPn(2)) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:667:3: note: in expansion of macro 'OPTIONAL_SPI_FLASH_SUPPORT'
+  667 |   OPTIONAL_SPI_FLASH_SUPPORT
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:638:3: note: in expansion of macro 'EXTERNAL_OPTIONAL_MODULE_SUPPORT'
+  638 |   EXTERNAL_OPTIONAL_MODULE_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1419:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1419 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:33:38: error: 'spi_flash_read' was not declared in this scope; did you mean 'spi_flash_mmap'?
+   33 |   YV(spi_flash, spi_flash_read, n0 = spi_flash_read(n2, a1, n0); NIPn(2)) \
+      |                                      ^~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1418:47: note: in definition of macro 'Z'
+ 1418 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:33:3: note: in expansion of macro 'YV'
+   33 |   YV(spi_flash, spi_flash_read, n0 = spi_flash_read(n2, a1, n0); NIPn(2)) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:667:3: note: in expansion of macro 'OPTIONAL_SPI_FLASH_SUPPORT'
+  667 |   OPTIONAL_SPI_FLASH_SUPPORT
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:638:3: note: in expansion of macro 'EXTERNAL_OPTIONAL_MODULE_SUPPORT'
+  638 |   EXTERNAL_OPTIONAL_MODULE_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1419:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1419 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:34:48: error: 'spi_flash_read_encrypted' was not declared in this scope
+   34 |   YV(spi_flash, spi_flash_read_encrypted, n0 = spi_flash_read_encrypted(n2, a1, n0); NIPn(2)) \
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1418:47: note: in definition of macro 'Z'
+ 1418 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:34:3: note: in expansion of macro 'YV'
+   34 |   YV(spi_flash, spi_flash_read_encrypted, n0 = spi_flash_read_encrypted(n2, a1, n0); NIPn(2)) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:667:3: note: in expansion of macro 'OPTIONAL_SPI_FLASH_SUPPORT'
+  667 |   OPTIONAL_SPI_FLASH_SUPPORT
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:638:3: note: in expansion of macro 'EXTERNAL_OPTIONAL_MODULE_SUPPORT'
+  638 |   EXTERNAL_OPTIONAL_MODULE_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1419:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1419 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:48:47: error: 'spi_flash_cache_enabled' was not declared in this scope; did you mean 'spi_flash_cache2phys'?
+   48 |   YV(spi_flash, spi_flash_cache_enabled, PUSH spi_flash_cache_enabled()) \
+      |                                               ^~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1418:47: note: in definition of macro 'Z'
+ 1418 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:48:3: note: in expansion of macro 'YV'
+   48 |   YV(spi_flash, spi_flash_cache_enabled, PUSH spi_flash_cache_enabled()) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:667:3: note: in expansion of macro 'OPTIONAL_SPI_FLASH_SUPPORT'
+  667 |   OPTIONAL_SPI_FLASH_SUPPORT
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:638:3: note: in expansion of macro 'EXTERNAL_OPTIONAL_MODULE_SUPPORT'
+  638 |   EXTERNAL_OPTIONAL_MODULE_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1419:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1419 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:71:31: error: cannot convert 'spi_flash_mmap_memory_t' to 'esp_partition_mmap_memory_t'
+   71 |                               (spi_flash_mmap_memory_t) n2, \
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1418:47: note: in definition of macro 'Z'
+ 1418 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:69:3: note: in expansion of macro 'YV'
+   69 |   YV(spi_flash, esp_partition_mmap, \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:667:3: note: in expansion of macro 'OPTIONAL_SPI_FLASH_SUPPORT'
+  667 |   OPTIONAL_SPI_FLASH_SUPPORT
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:638:3: note: in expansion of macro 'EXTERNAL_OPTIONAL_MODULE_SUPPORT'
+  638 |   EXTERNAL_OPTIONAL_MODULE_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1419:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1419 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/peter/.arduino15/packages/esp32/hardware/esp32/3.1.0-RC1/cores/esp32/Esp.h:24,
+                 from /home/peter/.arduino15/packages/esp32/hardware/esp32/3.1.0-RC1/cores/esp32/Arduino.h:201:
+/home/peter/.arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-466a392a/esp32c3/include/esp_partition/include/esp_partition.h:379:58: note:   initializing argument 4 of 'esp_err_t esp_partition_mmap(const esp_partition_t*, size_t, size_t, esp_partition_mmap_memory_t, const void**, esp_partition_mmap_handle_t*)'
+  379 |                              esp_partition_mmap_memory_t memory,
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:788:32: error: 'ledcSetup' was not declared in this scope
+  788 |       n0 = (cell_t) (1000000 * ledcSetup(n2, n1 / 1000.0, n0)); NIPn(2)) \
+      |                                ^~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1418:47: note: in definition of macro 'Z'
+ 1418 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:787:3: note: in expansion of macro 'YV'
+  787 |   YV(ledc, ledcSetup, \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:647:3: note: in expansion of macro 'OPTIONAL_LEDC_SUPPORT'
+  647 |   OPTIONAL_LEDC_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1419:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1419 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:789:27: error: 'ledcAttachPin' was not declared in this scope; did you mean 'ledcAttach'?
+  789 |   YV(ledc, ledcAttachPin, ledcAttachPin(n1, n0); DROPn(2)) \
+      |                           ^~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1418:47: note: in definition of macro 'Z'
+ 1418 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:789:3: note: in expansion of macro 'YV'
+  789 |   YV(ledc, ledcAttachPin, ledcAttachPin(n1, n0); DROPn(2)) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:647:3: note: in expansion of macro 'OPTIONAL_LEDC_SUPPORT'
+  647 |   OPTIONAL_LEDC_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1419:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1419 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:790:27: error: 'ledcDetachPin' was not declared in this scope; did you mean 'ledcDetach'?
+  790 |   YV(ledc, ledcDetachPin, ledcDetachPin(n0); DROP) \
+      |                           ^~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1418:47: note: in definition of macro 'Z'
+ 1418 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:790:3: note: in expansion of macro 'YV'
+  790 |   YV(ledc, ledcDetachPin, ledcDetachPin(n0); DROP) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:647:3: note: in expansion of macro 'OPTIONAL_LEDC_SUPPORT'
+  647 |   OPTIONAL_LEDC_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1419:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1419 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+Multiple libraries were found for "WiFi.h"
+  Used: /home/peter/.arduino15/packages/esp32/hardware/esp32/3.1.0-RC1/libraries/WiFi
+  Not used: /home/peter/Arduino/libraries/WiFiEspAT
+exit status 1
+
+Compilation error: 'spi_flash_init' was not declared in this scope; did you mean 'spi_flash_mmap'?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+esp2.x
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:48: warning: "CONFIG_IDF_TARGET_ESP32C3" redefined
+ #define CONFIG_IDF_TARGET_ESP32C3 (-1)
+ 
+In file included from /home/peter/.arduino15/packages/esp32/hardware/esp32/2.0.17/tools/sdk/esp32c3/include/newlib/platform_include/assert.h:20,
+                 from /home/peter/.arduino15/packages/esp32/tools/riscv32-esp-elf-gcc/esp-2021r2-patch5-8.4.0/riscv32-esp-elf/sys-include/sys/reent.h:503,
+                 from /home/peter/.arduino15/packages/esp32/hardware/esp32/2.0.17/tools/sdk/esp32c3/include/newlib/platform_include/sys/reent.h:17,
+                 from /home/peter/.arduino15/packages/esp32/tools/riscv32-esp-elf-gcc/esp-2021r2-patch5-8.4.0/riscv32-esp-elf/sys-include/stdio.h:60,
+                 from /home/peter/.arduino15/packages/esp32/hardware/esp32/2.0.17/cores/esp32/Arduino.h:27,
+                 from /home/peter/.var/app/cc.arduino.IDE2/cache/arduino/sketches/177E34B5FDC6D29B6BFB14EF7E91EF6A/sketch/ESP32forth-Tachyon.ino.cpp:1:
+/home/peter/.arduino15/packages/esp32/hardware/esp32/2.0.17/tools/sdk/esp32c3/qio_qspi/include/sdkconfig.h:9: note: this is the location of the previous definition
+ #define CONFIG_IDF_TARGET_ESP32C3 1
+ 
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:152: warning: "UEFORTH_PLATFORM_IS_ESP32C3" redefined
+ # define UEFORTH_PLATFORM_IS_ESP32C3 -1
+ 
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:74: note: this is the location of the previous definition
+ # define UEFORTH_PLATFORM_IS_ESP32C3 (-1)
+ 
+Sketch uses 937142 bytes (71%) of program storage space. Maximum is 1310720 bytes.
+Global variables use 43492 bytes (13%) of dynamic memory, leaving 284188 bytes for local variables. Maximum is 327680 bytes.
+
+
+
+esp 3.x
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:48: warning: "CONFIG_IDF_TARGET_ESP32C3" redefined
+   48 | #define CONFIG_IDF_TARGET_ESP32C3 (-1)
+      | 
+In file included from /home/peter/.arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-466a392a/esp32c3/include/newlib/platform_include/sys/lock.h:9,
+                 from /home/peter/.arduino15/packages/esp32/tools/esp-rv32/2405/riscv32-esp-elf/include/sys/reent.h:34,
+                 from /home/peter/.arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-466a392a/esp32c3/include/newlib/platform_include/sys/reent.h:22,
+                 from /home/peter/.arduino15/packages/esp32/tools/esp-rv32/2405/riscv32-esp-elf/include/stdio.h:60,
+                 from /home/peter/.arduino15/packages/esp32/hardware/esp32/3.1.0-RC1/cores/esp32/Arduino.h:27,
+                 from /home/peter/.var/app/cc.arduino.IDE2/cache/arduino/sketches/177E34B5FDC6D29B6BFB14EF7E91EF6A/sketch/ESP32forth-Tachyon.ino.cpp:1:
+/home/peter/.arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-466a392a/esp32c3/qio_qspi/include/sdkconfig.h:288: note: this is the location of the previous definition
+  288 | #define CONFIG_IDF_TARGET_ESP32C3 1
+      | 
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:152: warning: "UEFORTH_PLATFORM_IS_ESP32C3" redefined
+  152 | # define UEFORTH_PLATFORM_IS_ESP32C3 -1
+      | 
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:74: note: this is the location of the previous definition
+   74 | # define UEFORTH_PLATFORM_IS_ESP32C3 (-1)
+      | 
+In file included from /home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:20,
+                 from /home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:623:
+/home/peter/.arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-466a392a/esp32c3/include/spi_flash/include/esp_spi_flash.h:6:2: warning: #warning esp_spi_flash.h is deprecated, please use spi_flash_mmap.h instead [-Wcpp]
+    6 | #warning esp_spi_flash.h is deprecated, please use spi_flash_mmap.h instead
+      |  ^~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino: In function 'cell_t* forth_run(cell_t*)':
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1412:20: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1412 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                    ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1412:25: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1412 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                         ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1412:30: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1412 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                              ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1412:34: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1412 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                  ^~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1412:39: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1412 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                       ^
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1412:42: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1412 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                          ^~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1412:49: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1412 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                                 ^~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1412:56: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1412 |   register cell_t *ip, *rp, *sp, tos, w, index, limit, branch;
+      |                                                        ^~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1413:19: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1413 |   register float *fp, ft;
+      |                   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1413:23: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+ 1413 |   register float *fp, ft;
+      |                       ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:27:33: error: 'spi_flash_init' was not declared in this scope; did you mean 'spi_flash_mmap'?
+   27 |   YV(spi_flash, spi_flash_init, spi_flash_init()) \
+      |                                 ^~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:47: note: in definition of macro 'Z'
+ 1415 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:27:3: note: in expansion of macro 'YV'
+   27 |   YV(spi_flash, spi_flash_init, spi_flash_init()) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:664:3: note: in expansion of macro 'OPTIONAL_SPI_FLASH_SUPPORT'
+  664 |   OPTIONAL_SPI_FLASH_SUPPORT
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:635:3: note: in expansion of macro 'EXTERNAL_OPTIONAL_MODULE_SUPPORT'
+  635 |   EXTERNAL_OPTIONAL_MODULE_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1416 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:28:47: error: 'spi_flash_get_chip_size' was not declared in this scope
+   28 |   YV(spi_flash, spi_flash_get_chip_size, PUSH spi_flash_get_chip_size()) \
+      |                                               ^~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:47: note: in definition of macro 'Z'
+ 1415 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:28:3: note: in expansion of macro 'YV'
+   28 |   YV(spi_flash, spi_flash_get_chip_size, PUSH spi_flash_get_chip_size()) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:664:3: note: in expansion of macro 'OPTIONAL_SPI_FLASH_SUPPORT'
+  664 |   OPTIONAL_SPI_FLASH_SUPPORT
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:635:3: note: in expansion of macro 'EXTERNAL_OPTIONAL_MODULE_SUPPORT'
+  635 |   EXTERNAL_OPTIONAL_MODULE_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1416 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:29:46: error: 'spi_flash_erase_sector' was not declared in this scope
+   29 |   YV(spi_flash, spi_flash_erase_sector, n0 = spi_flash_erase_sector(n0)) \
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:47: note: in definition of macro 'Z'
+ 1415 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:29:3: note: in expansion of macro 'YV'
+   29 |   YV(spi_flash, spi_flash_erase_sector, n0 = spi_flash_erase_sector(n0)) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:664:3: note: in expansion of macro 'OPTIONAL_SPI_FLASH_SUPPORT'
+  664 |   OPTIONAL_SPI_FLASH_SUPPORT
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:635:3: note: in expansion of macro 'EXTERNAL_OPTIONAL_MODULE_SUPPORT'
+  635 |   EXTERNAL_OPTIONAL_MODULE_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1416 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:30:45: error: 'spi_flash_erase_range' was not declared in this scope; did you mean 'spi_flash_mmap_pages'?
+   30 |   YV(spi_flash, spi_flash_erase_range, n0 = spi_flash_erase_range(n1, n0); DROP) \
+      |                                             ^~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:47: note: in definition of macro 'Z'
+ 1415 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:30:3: note: in expansion of macro 'YV'
+   30 |   YV(spi_flash, spi_flash_erase_range, n0 = spi_flash_erase_range(n1, n0); DROP) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:664:3: note: in expansion of macro 'OPTIONAL_SPI_FLASH_SUPPORT'
+  664 |   OPTIONAL_SPI_FLASH_SUPPORT
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:635:3: note: in expansion of macro 'EXTERNAL_OPTIONAL_MODULE_SUPPORT'
+  635 |   EXTERNAL_OPTIONAL_MODULE_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1416 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:31:39: error: 'spi_flash_write' was not declared in this scope; did you mean 'spi_flash_source'?
+   31 |   YV(spi_flash, spi_flash_write, n0 = spi_flash_write(n2, a1, n0); NIPn(2)) \
+      |                                       ^~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:47: note: in definition of macro 'Z'
+ 1415 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:31:3: note: in expansion of macro 'YV'
+   31 |   YV(spi_flash, spi_flash_write, n0 = spi_flash_write(n2, a1, n0); NIPn(2)) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:664:3: note: in expansion of macro 'OPTIONAL_SPI_FLASH_SUPPORT'
+  664 |   OPTIONAL_SPI_FLASH_SUPPORT
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:635:3: note: in expansion of macro 'EXTERNAL_OPTIONAL_MODULE_SUPPORT'
+  635 |   EXTERNAL_OPTIONAL_MODULE_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1416 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:32:49: error: 'spi_flash_write_encrypted' was not declared in this scope
+   32 |   YV(spi_flash, spi_flash_write_encrypted, n0 = spi_flash_write_encrypted(n2, a1, n0); NIPn(2)) \
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:47: note: in definition of macro 'Z'
+ 1415 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:32:3: note: in expansion of macro 'YV'
+   32 |   YV(spi_flash, spi_flash_write_encrypted, n0 = spi_flash_write_encrypted(n2, a1, n0); NIPn(2)) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:664:3: note: in expansion of macro 'OPTIONAL_SPI_FLASH_SUPPORT'
+  664 |   OPTIONAL_SPI_FLASH_SUPPORT
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:635:3: note: in expansion of macro 'EXTERNAL_OPTIONAL_MODULE_SUPPORT'
+  635 |   EXTERNAL_OPTIONAL_MODULE_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1416 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:33:38: error: 'spi_flash_read' was not declared in this scope; did you mean 'spi_flash_mmap'?
+   33 |   YV(spi_flash, spi_flash_read, n0 = spi_flash_read(n2, a1, n0); NIPn(2)) \
+      |                                      ^~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:47: note: in definition of macro 'Z'
+ 1415 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:33:3: note: in expansion of macro 'YV'
+   33 |   YV(spi_flash, spi_flash_read, n0 = spi_flash_read(n2, a1, n0); NIPn(2)) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:664:3: note: in expansion of macro 'OPTIONAL_SPI_FLASH_SUPPORT'
+  664 |   OPTIONAL_SPI_FLASH_SUPPORT
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:635:3: note: in expansion of macro 'EXTERNAL_OPTIONAL_MODULE_SUPPORT'
+  635 |   EXTERNAL_OPTIONAL_MODULE_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1416 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:34:48: error: 'spi_flash_read_encrypted' was not declared in this scope
+   34 |   YV(spi_flash, spi_flash_read_encrypted, n0 = spi_flash_read_encrypted(n2, a1, n0); NIPn(2)) \
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:47: note: in definition of macro 'Z'
+ 1415 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:34:3: note: in expansion of macro 'YV'
+   34 |   YV(spi_flash, spi_flash_read_encrypted, n0 = spi_flash_read_encrypted(n2, a1, n0); NIPn(2)) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:664:3: note: in expansion of macro 'OPTIONAL_SPI_FLASH_SUPPORT'
+  664 |   OPTIONAL_SPI_FLASH_SUPPORT
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:635:3: note: in expansion of macro 'EXTERNAL_OPTIONAL_MODULE_SUPPORT'
+  635 |   EXTERNAL_OPTIONAL_MODULE_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1416 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:48:47: error: 'spi_flash_cache_enabled' was not declared in this scope; did you mean 'spi_flash_cache2phys'?
+   48 |   YV(spi_flash, spi_flash_cache_enabled, PUSH spi_flash_cache_enabled()) \
+      |                                               ^~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:47: note: in definition of macro 'Z'
+ 1415 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:48:3: note: in expansion of macro 'YV'
+   48 |   YV(spi_flash, spi_flash_cache_enabled, PUSH spi_flash_cache_enabled()) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:664:3: note: in expansion of macro 'OPTIONAL_SPI_FLASH_SUPPORT'
+  664 |   OPTIONAL_SPI_FLASH_SUPPORT
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:635:3: note: in expansion of macro 'EXTERNAL_OPTIONAL_MODULE_SUPPORT'
+  635 |   EXTERNAL_OPTIONAL_MODULE_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1416 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:71:31: error: cannot convert 'spi_flash_mmap_memory_t' to 'esp_partition_mmap_memory_t'
+   71 |                               (spi_flash_mmap_memory_t) n2, \
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:47: note: in definition of macro 'Z'
+ 1415 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/spi-flash.h:69:3: note: in expansion of macro 'YV'
+   69 |   YV(spi_flash, esp_partition_mmap, \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:664:3: note: in expansion of macro 'OPTIONAL_SPI_FLASH_SUPPORT'
+  664 |   OPTIONAL_SPI_FLASH_SUPPORT
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:635:3: note: in expansion of macro 'EXTERNAL_OPTIONAL_MODULE_SUPPORT'
+  635 |   EXTERNAL_OPTIONAL_MODULE_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1416 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/peter/.arduino15/packages/esp32/hardware/esp32/3.1.0-RC1/cores/esp32/Esp.h:24,
+                 from /home/peter/.arduino15/packages/esp32/hardware/esp32/3.1.0-RC1/cores/esp32/Arduino.h:201:
+/home/peter/.arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-466a392a/esp32c3/include/esp_partition/include/esp_partition.h:379:58: note:   initializing argument 4 of 'esp_err_t esp_partition_mmap(const esp_partition_t*, size_t, size_t, esp_partition_mmap_memory_t, const void**, esp_partition_mmap_handle_t*)'
+  379 |                              esp_partition_mmap_memory_t memory,
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:785:32: error: 'ledcSetup' was not declared in this scope
+  785 |       n0 = (cell_t) (1000000 * ledcSetup(n2, n1 / 1000.0, n0)); NIPn(2)) \
+      |                                ^~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:47: note: in definition of macro 'Z'
+ 1415 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:784:3: note: in expansion of macro 'YV'
+  784 |   YV(ledc, ledcSetup, \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:644:3: note: in expansion of macro 'OPTIONAL_LEDC_SUPPORT'
+  644 |   OPTIONAL_LEDC_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1416 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:786:27: error: 'ledcAttachPin' was not declared in this scope; did you mean 'ledcAttach'?
+  786 |   YV(ledc, ledcAttachPin, ledcAttachPin(n1, n0); DROPn(2)) \
+      |                           ^~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:47: note: in definition of macro 'Z'
+ 1415 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:786:3: note: in expansion of macro 'YV'
+  786 |   YV(ledc, ledcAttachPin, ledcAttachPin(n1, n0); DROPn(2)) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:644:3: note: in expansion of macro 'OPTIONAL_LEDC_SUPPORT'
+  644 |   OPTIONAL_LEDC_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1416 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:787:27: error: 'ledcDetachPin' was not declared in this scope; did you mean 'ledcDetach'?
+  787 |   YV(ledc, ledcDetachPin, ledcDetachPin(n0); DROP) \
+      |                           ^~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1415:47: note: in definition of macro 'Z'
+ 1415 | #define Z(flags, name, op, code) OP_ ## op: { code; } NEXT;
+      |                                               ^~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:787:3: note: in expansion of macro 'YV'
+  787 |   YV(ledc, ledcDetachPin, ledcDetachPin(n0); DROP) \
+      |   ^~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:644:3: note: in expansion of macro 'OPTIONAL_LEDC_SUPPORT'
+  644 |   OPTIONAL_LEDC_SUPPORT \
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/home/peter/Dropbox/Arduino/ESP32forth-Tachyon/ESP32forth-Tachyon.ino:1416:3: note: in expansion of macro 'PLATFORM_OPCODE_LIST'
+ 1416 |   PLATFORM_OPCODE_LIST
+      |   ^~~~~~~~~~~~~~~~~~~~
+Multiple libraries were found for "WiFi.h"
+  Used: /home/peter/.arduino15/packages/esp32/hardware/esp32/3.1.0-RC1/libraries/WiFi
+  Not used: /home/peter/Arduino/libraries/WiFiEspAT
+exit status 1
+
+Compilation error: 'spi_flash_init' was not declared in this scope; did you mean 'spi_flash_mmap'?

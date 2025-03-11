@@ -1,0 +1,3 @@
+# transfer text file over /dev/tty$2 with extra line delay
+# ./send EXTEND ACM0 10
+ascii-xfr -s -n -l $3 $1.FTH > /dev/tty$2
