@@ -1,7 +1,7 @@
-// PBJ: WARNING - This will not compile with Espressif ESP32 V3 board libraries - use 2.0.11
+// PBJ: WARNING - This will not compile with Espressif ESP32 V3 board libraries - use 2.0.17 or less
 
 /*
- * Copyright 2021 Bradley D. Nelson
+ * Copyright 2021 Bradley D. NelsonP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -291,6 +291,7 @@ typedef struct {
   X("UL@", ULAT, tos = *(uint32_t *) tos) \
   X("SW@", SWAT, tos = *(int16_t *) tos) \
   X("UW@", UWAT, tos = *(uint16_t *) tos) \
+  X("W@", WAT, tos = *(uint16_t *) tos) \
   X("C@", CAT, tos = *(uint8_t *) tos) \
   X("!", STORE, *(cell_t *) tos = *sp--; DROP) \
   X("L!", LSTORE, *(int32_t *) tos = *sp--; DROP) \
@@ -304,6 +305,8 @@ typedef struct {
   X("R>", FROMR, DUP; tos = *rp; --rp) \
   X("R!", RST, *rp = tos; DROP) \
   X("R@", RAT, DUP; tos = *rp) \
+  X("BOUNDS", BOUNDS, w = tos; tos = *sp; *sp = w+tos) \
+  X("ADO:", ADO, branch = (uint32_t) ip; index = (uint32_t) *sp; limit = tos + (uint32_t) *sp--; DROP) \
   X("DO:", DOO, branch = (uint32_t) ip; index = tos; limit = (uint32_t) *sp--; DROP) \
   X("LOOP:", LOOPY,  if (++index != limit) ip = (cell_t *) branch; else ) \
   X("I:", IQ, DUP; tos = index) \
@@ -1497,7 +1500,7 @@ create I ' r@ @ ' i !  ( i is same as r@ )
 : J ( -- n ) rp@ 3 cells - @ ;
 : K ( -- n ) rp@ 5 cells - @ ;
 
-: bounds ( from for -- to from )   over + swap ;
+\ : bounds ( from for -- to from )   over + swap ;
 
 ( Exceptions )
 variable handler
@@ -1524,11 +1527,13 @@ handler 'throw-handler !
 : is ( xt "name -- ) postpone to ; immediate
 ( Defer I/O to platform specific )
 defer type
+defer emit
 defer key
 defer key?
 defer terminate
 : bye   		0 terminate ;
-: emit ( n -- ) 	>r rp@ 1 type rdrop ;
+: default-emit ( n -- ) >r rp@ 1 type rdrop ;
+' default-emit is emit
 : space 		bl emit ;
 : cr 			13 emit nl emit ;
 
@@ -1618,7 +1623,7 @@ variable hld
 : CUR ( cmd n -- )	[char] [ ESCX SWAP _CSI ;
 : XY ( x y -- )		2 ANSI [char] ; SWAP CUR [char] H _CSI ;
 
-
+\ ESC[#A  : <UP> ESC[ PRINT 'A' EMIT ;
 
 
 : flushkeys		begin key? while   begin key? while key drop repeat    10000 0 do loop   repeat ;
@@ -1712,7 +1717,7 @@ variable boot-prompt
 : free. ( nf nu -- ) 2dup swap . ." free + " . ." used = " 2dup + . ." total ("
                      over + 100 -rot */ n. ." % free)" ;
 ( rev 564a8fc68b545ebeb3ab+ )
-: .ver		."  v7.0.7.15 - PBJ240829" ;
+: .ver		."  v7.0.7.15 - PBJ250329-2200 " ;
 : raw-ok   .ver cr
            boot-prompt @ if boot-prompt @ execute then
            ." Forth dictionary: " remaining used free. cr
@@ -1967,35 +1972,13 @@ cell 1- constant cell-mask
 : cell-shift ( a -- a ) cell-mask and 8 * ;
 : ca@ ( a -- n ) dup cell-base @ swap cell-shift rshift 255 and ;
 
-( Print address line leaving room )
-: #h    16 extract hold ;
 ( Semi-dangerous word to trim down the system heap )
 DEFINED? realloc [IF]
 : relinquish ( n -- ) negate 'heap-size +! 'heap-start @ 'heap-size @ realloc drop ;
 [THEN]
 
 forth definitions internals
-: .L_   <# #h #h #h #h $5f hold #h #h #h #h #> type ;
-: .addr ( a -- ) cr .L_ $3a emit 2 spaces ;
-: .h          <# 1- for #h next #> type ;
-: .L ( n -- )  8 .h ;
-: .W ( n -- )  4 .h ;
-: .B ( n -- )  2 .h ;
 
-: aemit ( ch -- )   dup 32 < over 126 > or if drop 46 then emit ;
-
-( Examine Memory )
-: dump ( a n -- )
-   over 15 and if over .addr then
-   for aft  ( addr )
-     dup 15 and 0= if dup .addr then
-     dup 3 and 0= if space then
-     dup c@ .B space 1+
-     dup 15 and 0= if 4 spaces dup dup 16 - do i c@ aemit loop then
-   then next drop cr ;
-
-( quick dump of 32 bytes )
-: qd ( addr -- )    $20 dump ;
 
 
 
@@ -2531,11 +2514,15 @@ forth definitions internals
 
 forth
 ( Block Files )
+ 1024 constant blksz
+ 64 constant blkw
+ 16 constant blkh
+: blksz! ( x y -- )	to blkh to blkw blkw blkh * to blksz ;
 internals definitions
-: clobber-line ( a -- a' ) 	dup 63 blank 63 + nl over c! 1+ ;
-: clobber ( a -- ) 		15 for clobber-line next drop ;
+: clobber-line ( a -- a' ) 	dup blkw 1- blank blkw 1- + nl over c! 1+ ;
+: clobber ( a -- ) 		blkh 1- for clobber-line next drop ;
 0 value block-dirty
-create block-data 1024 allot
+create block-data blksz 4 * allot
 forth definitions internals
 
 -1 value block-fid   variable scr   -1 value block-id
@@ -2548,20 +2535,20 @@ internals definitions
 : common-default-use s" blocks.fb" open-blocks ;
 ' common-default-use is default-use
 : use?!   block-fid 0< if default-use then ;
-: grow-blocks ( n -- ) 1024 * block-fid file-size throw max block-fid resize-file throw ;
+: grow-blocks ( n -- ) blksz * block-fid file-size throw max block-fid resize-file throw ;
 forth definitions internals
 : save-buffers
    block-dirty if
-     block-id grow-blocks block-id 1024 * block-fid reposition-file throw
-     block-data 1024 block-fid write-file throw
+     block-id grow-blocks block-id blksz * block-fid reposition-file throw
+     block-data blksz block-fid write-file throw
      block-fid flush-file throw
      0 to block-dirty
    then ;
 : block ( n -- a ) use?! dup block-id = if drop block-data exit then
                    save-buffers dup grow-blocks
-                   dup 1024 * block-fid reposition-file throw
+                   dup blksz * block-fid reposition-file throw
                    block-data clobber
-                   block-data 1024 block-fid read-file throw drop
+                   block-data blksz block-fid read-file throw drop
                    to block-id block-data ;
 : buffer ( n -- a ) use?! dup block-id = if drop block-data exit then
                     save-buffers to block-id block-data ;
@@ -2570,26 +2557,26 @@ forth definitions internals
 : flush   save-buffers empty-buffers ;
 
 ( Loading )
-: load ( n -- ) block 1024 evaluate ;
+: load ( n -- ) block blksz evaluate ;
 : thru ( a b -- ) over - 1+ for aft dup >r load r> 1+ then next drop ;
 
 ( Utility )
 : copy ( from to -- )
-   swap block pad 1024 cmove pad swap block 1024 cmove update ;
+   swap block pad blksz cmove pad swap block blksz cmove update ;
 
 ( Editing )
 : list ( n -- ) scr ! ." Block " scr @ . cr scr @ block
-   15 for dup 63 type [char] | emit space 15 r@ - . cr 64 + next drop ;
+   blkh 1- for dup blkw 1- type [char] | emit space blkh 1- r@ - . cr blkw + next drop ;
 internals definitions
-: @line ( n -- ) 64 * scr @ block + ;
+: @line ( n -- ) blkw * scr @ block + ;
 : e' ( n -- ) @line clobber-line drop update ;
 forth definitions internals
 vocabulary editor   also editor definitions
 : l    scr @ list ;   : n    scr ++ l ;  : p   scr -- l ;
-: wipe   15 for r@ e' next l ;   : e   e' l ;
-: d ( n -- ) dup 1+ @line swap @line 15 @line over - cmove 15 e ;
-: r ( n "line" -- ) 0 parse 64 min rot dup e @line swap cmove l ;
-: a ( n "line" -- ) dup @line over 1+ @line 16 @line over - cmove> r ;
+: wipe   blkh 1- for r@ e' next l ;   : e   e' l ;
+: d ( n -- ) dup 1+ @line swap @line blkh 1- @line over - cmove blkh 1- e ;
+: r ( n "line" -- ) 0 parse blkw min rot dup e @line swap cmove l ;
+: a ( n "line" -- ) dup @line over 1+ @line blkh @line over - cmove> r ;
 only forth definitions
 
 ( ANSI Codes )
@@ -2806,7 +2793,7 @@ also ledc also serial also SPIFFS
 
 ( Startup Setup )
 echo ~~
-115200 Serial.begin
+921600 Serial.begin
 100 ms
 -1 z" /spiffs" 10 SPIFFS.begin drop
 led 2 pinMode
